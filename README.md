@@ -1,13 +1,13 @@
-# Django project template
-This project is a template django project. It contains a django project called
-config and a single django application called app.
+# GitHub Container Regsitry CI
+This project demonstrates how to create a Docker image using GihHub CI and
+uploading it to the GitHub container registry.
 
-## Creating a project from this template
-To create a project from this template run the following commands.
+## Build strategy
+The build strategy will be to create two Docker images. On the base image
+os packages and python dependencies will be installed.
 
-    gh repo create treadup/<new repo name> -p treadup/django-project-template
+The app image will be based on the base image. On the app image we will install
+the Django application.
 
-## Template projects
-In GitHub you can turn a project into a template project by going to Settings
-and then clicking the Template repository checkbox.
-
+The goal should be to rebuild the base image only when the python dependencies
+change.

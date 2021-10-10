@@ -17,4 +17,5 @@ jobs:
             - name: Build image
               run: |
                   echo Building docker images
+                  ls -R
                   ./scripts/build_docker_image_ci.sh

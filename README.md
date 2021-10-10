@@ -1,4 +1,4 @@
-# GitHub Container Regsitry CI
+# GitHub Container Registry CI
 This project demonstrates how to create a Docker image using GihHub CI and
 uploading it to the GitHub container registry.
 

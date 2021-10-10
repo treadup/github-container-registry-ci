@@ -1,0 +1,20 @@
+# GitHub Action that builds the docker images.
+
+name: build
+on:
+    push:
+        branches: main
+jobs:
+    build:
+        name: Build docker images
+        runs-on: ubuntu-latest
+        container: docker:latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
+            - name: Build image
+              run: |
+                  echo Building docker images
+                  ./scripts/build_docker_image_ci.sh

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=$(python3 scripts/filehash.py)
+VERSION=$(python3 scripts/filehash.py local)
 DEPENDENCIES_IMAGE="github-container-registry-ci-dependencies:$VERSION"
 
 if docker inspect $DEPENDENCIES_IMAGE &> /dev/null; then
